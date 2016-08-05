@@ -9,7 +9,7 @@ public class MovableImageView: UIImageView, UIGestureRecognizerDelegate {
         userInteractionEnabled = true
         movableGestureRecognizers.forEach(addGestureRecognizer)
     }
-    var movableGestureRecognizers: [UIGestureRecognizer] {
+    public var movableGestureRecognizers: [UIGestureRecognizer] {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragGesture(_:)))
         let rotationGestureRecognizer = UIRotationGestureRecognizer(target: self, action: #selector(rotateGesture(_:)))
         rotationGestureRecognizer.delegate = self
